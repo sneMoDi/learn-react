@@ -26,7 +26,7 @@ export default function BucketList() {
   function handleToggleYourList(artworkId, nextSeen) {
     const tmpList = yourList.map(e => {
         if (e.id === artworkId) {
-            e.seen = nextSeen
+          return {...e, seen: nextSeen}
         }
         return e
     });
